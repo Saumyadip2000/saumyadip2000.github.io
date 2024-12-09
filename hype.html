@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width,initial-scale=1.0">
+    <title>Portfolio Web Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./scripts.js"></script>
+    <link rel="icon" type="image/jpg" href="./imgs/favicon.jpg">
+    <style>
+        /* Additional CSS for the Project Display Section */
+        .project-container {
+            display: flex;
+            align-items: flex-start; /* Align items at the top */
+            gap: 20px; /* Space between the video and description */
+            margin: 20px 0;
+        }
+
+        .project-video {
+            flex: 2; /* Make video container take up 2/3 of the space */
+            max-width: 60%; /* Ensure the video doesn’t occupy excessive width */
+        }
+
+        .project-video video {
+            width: 100%; /* Video should fill its container */
+            height: auto;
+        }
+
+        .project-description {
+            flex: 1; /* Description takes up 1/3 of the space */
+            max-width: 40%; /* Restrict description to 40% of container width */
+        }
+
+        .project-description h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .project-description p {
+            margin: 5px 0;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        .project-description a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        .project-description a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add a media query for responsiveness */
+        @media (max-width: 768px) {
+            .project-container {
+                flex-direction: column; /* Stack items vertically on smaller screens */
+                gap: 10px;
+            }
+
+            .project-video, .project-description {
+                max-width: 100%; /* Full width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo-holder">
+            <div class="logo">L</div>
+            <div class="logo-text">Portfolio Website</div>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="mailto:saumyadip415@gmail.com" class="button">Contact Me</a></li>
+            </ul>
+            <a href="#" class="mobile-toggle" onClick="toggleMobileMenu();">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <!-- Other sections of the portfolio -->
+        
+        <section id="projects" class="projects container">
+            <h2>
+                <small>Previous</small>
+                Completed Projects
+            </h2>
+
+            <!-- Project Display Section 
+            <div class="project-container">
+                <div class="project-video">
+                    <video controls>
+                        <source src="./imgs/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-description">
+                    <h3>Project Title</h3>
+                    <p>This is the description of the project. You can add a detailed explanation here about the functionality, purpose, and technology used in the project.</p>
+                    <p><strong>GitHub Link:</strong> <a href="https://github.com/Saumyadip2000/project-repo" target="_blank">GitHub Repository</a></p>
+                </div>
+            </div>-->
+
+            <!-- Other project items (if any) -->
+            <div class="bento">
+                <a href="#" class="bento-item">
+                    <img src="./imgs/bento-2.jpg" alt="Churhview" width="100%" />
+                </a>
+                <a href="#" class="bento-item">
+                    <img src="./imgs/bento-3.jpg" alt="Harley" width="100%" />
+                </a>
+                <!-- Add more items as needed -->
+            </div>
+        </section>
+
+        <!-- Additional sections -->
+        <section class="chatbot container">
+            <h2>
+                <small>Talk to me</small>
+                Chatbot
+            </h2>
+            <div class="chatbot-blue">
+                <div class="chat-info">
+                    <h3>Azure AI Chatbot</h3>
+                    <p>I've put together a chatbot here which knows all my skills, work experience and has a copy of my CV/Resume. You can use it to ask questions about me to get a better idea of who I am and what I've done.</p>
+                    <p>You can also download my resume here if you want to take a look at it. I'm currently looking for new opportunities so if you have a project you think I'd be a good fit for, please get in touch!</p>
+                    <a href="./Sample_Resume_Template.pdf" class="button black">Download Resume</a>
+                </div>
+                <div class="chat-box">
+                    <div class="scroll-area">
+                        <ul id="chat-log">
+                            <li>
+                                <span class="avatar bot">AI</span>
+                                <div class="message">
+                                    Hi, I'm a friendly chatbot that lets you interactive with this portfolio and CV. How can I help?
+                                </div>
+                            </li>
+                            <li>
+                                <span class="avatar user">User</span>
+                                <div class="message">
+                                    I have a question to ask you about this resume
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="chat-message">
+                        <input type="text" placeholder="Ask something here...">
+                        <button class="button black">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
